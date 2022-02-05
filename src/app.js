@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const {engine} = require('express-handlebars');
+const requestIp = require('request-ip');
 
 
 //Config Files Statics
@@ -14,14 +15,17 @@ app.set('views', './src/views');
 
 //Routes
 app.get('/', async(req,res) => {
-    const dados = await axios.get('https://ip-client-remote.herokuapp.com/')
+    var clientIp = requestIp.getClientIp(req); 
+    console.log(clientIp);
+    
+    const dados = await axios.get(`http://ip-api.com/json/${clientIp}`)
     const status = dados.data.status;
     const ip = dados.data.query;
     const country = dados.data.country;
     const city = dados.data.city;
     const region = dados.data.region;
     const countryCode = dados.data.countryCode;
-    const isp = dados.data.isp;    
+    const isp = dados.data.isp;        
     res.render('home', {status, ip, country, countryCode, city, region, isp});
 });
 

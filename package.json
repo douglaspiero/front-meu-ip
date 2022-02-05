@@ -1,0 +1,27 @@
+{
+  "name": "front-meu-ip",
+  "version": "1.0.0",
+  "description": "Front Meu IP",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev" : "nodemon src/app.js",
+    "start" : "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglaspiero/front-meu-ip.git"
+  },
+  "author": "Douglas Piero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglaspiero/front-meu-ip/issues"
+  },
+  "homepage": "https://github.com/douglaspiero/front-meu-ip#readme"
+}

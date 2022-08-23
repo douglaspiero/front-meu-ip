@@ -1,2 +1,2 @@
 ### front-meu-ip
-https://dashboard.heroku.com/apps/meu-ip-front
+https://meu-ip-front.herokuapp.com/
